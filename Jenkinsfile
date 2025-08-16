@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'new test stage'
+                sh 'ls -la'
             }
         }
     }
