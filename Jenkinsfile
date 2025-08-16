@@ -15,12 +15,13 @@ pipeline {
                     node -v
                     nohup node app.js > app.log 2>&1 &
                     sleep 5
+                    curl http://localhost:3001/
                 '''
             }
         }
         stage('Test') {
             steps {
-                sh 'curl http://localhost:3001/'
+                echo 'new test stage'
             }
         }
     }
