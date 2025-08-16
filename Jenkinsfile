@@ -9,7 +9,7 @@ pipeline {
                     reuseNode true
                 }
             }
-            step {
+            steps {
                 echo 'Checking pwd'
                 sh '''
                     node -v
@@ -18,7 +18,7 @@ pipeline {
             }
         }
         stage('Test') {
-            step {
+            steps {
                 sh 'curl http://localhost:3001/'
             }
         }
