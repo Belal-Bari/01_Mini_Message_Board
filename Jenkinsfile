@@ -9,12 +9,17 @@ pipeline {
                     reuseNode true
                 }
             }
-            steps {
+            step {
                 echo 'Checking pwd'
                 sh '''
                     node -v
                     npm run 
                 '''
+            }
+        }
+        stage('Test') {
+            step {
+                sh 'curl http://localhost:3001/'
             }
         }
     }
