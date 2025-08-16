@@ -14,6 +14,7 @@ pipeline {
                 sh '''
                     node -v
                     node app.js 
+                    sleep 5
                 '''
             }
         }
