@@ -13,7 +13,7 @@ pipeline {
                 echo 'Checking pwd'
                 sh '''
                     node -v
-                    nohup node app.js > app.log 2>&1 &
+                    node app.js
                     sleep 5
                     apk add --no-cache curl
                     curl http://localhost:3001/
