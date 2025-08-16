@@ -13,7 +13,7 @@ pipeline {
                 echo 'Checking pwd'
                 sh '''
                     node -v
-                    npm run 
+                    npm start 
                 '''
             }
         }
