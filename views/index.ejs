@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <h1>Mini Message Board</h1>
+        <a href="/news">Create new post</a>
+        <div>
+            <% messages.map((item, key) => { %>
+                <div>
+                    <h3><%= item.user %></h3>
+                    <p>Text: <%= item.text %></p>
+                    <p>Date added: <%= item.added %></p>
+                </div>
+            <% }) %>
+        </div>
+    </body>
+</html>
