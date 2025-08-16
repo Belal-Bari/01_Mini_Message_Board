@@ -13,7 +13,7 @@ pipeline {
                 echo 'Checking pwd'
                 sh '''
                     node -v
-                    nohup node app.js 
+                    nohup node app.js > app.log 2>&1 &
                     sleep 5
                 '''
             }
