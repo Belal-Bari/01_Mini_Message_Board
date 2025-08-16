@@ -15,6 +15,7 @@ pipeline {
                     node -v
                     nohup node app.js > app.log 2>&1 &
                     sleep 5
+                    apk add --no-cache curl
                     curl http://localhost:3001/
                 '''
             }
