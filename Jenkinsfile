@@ -10,9 +10,10 @@ pipeline {
                 }
             }
             steps {
-                echo 'Checking pws'
+                echo 'Checking pwd'
                 sh '''
-                    pwd
+                    node -v
+                    npm run 
                 '''
             }
         }
