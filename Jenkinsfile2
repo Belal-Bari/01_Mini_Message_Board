@@ -8,7 +8,22 @@ pipeline {
       steps {
         script {
           echo "Checking node version"
-          sh 'node -v'
+          sh '''
+            node -v
+            npm -v
+            npm ci
+          '''
+        }
+      }
+    }
+    stage ("Test") {
+      steps {
+        script {
+          sh '''
+            node app.js
+            sleep 5
+            curl http://localhost:3001/
+          '''
         }
       }
     }
