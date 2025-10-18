@@ -1,0 +1,23 @@
+pipeline {
+  agent any
+  tools {
+    NodeJS 'nodeJS'
+  }
+  stages {
+    stage ('Check Node') {
+      steps {
+        script {
+          echo "Checking node version"
+          sh 'node -v'
+        }
+      }
+    }
+    stage ('Deploy') {
+      steps {
+        script {
+          echo "Deploy to be configured..."
+        }
+      }
+    }
+  }
+}
