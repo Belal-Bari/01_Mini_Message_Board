@@ -1,4 +1,4 @@
-FROM node:18-apline
+FROM node:20-alpine
 
 RUN mkdir -p /home/app
 
